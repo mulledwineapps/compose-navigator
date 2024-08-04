@@ -1,0 +1,20 @@
+/local.properties
+.DS_Store
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Gradle files
+.gradle
+/build
+*.jar
+gradlew
+gradlew.bat
+
+# IntelliJ
+*.iml
+/.idea
+misc.xml
+deploymentTargetDropDown.xml
+render.experimental.xml
