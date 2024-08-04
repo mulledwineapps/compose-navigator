@@ -1,10 +1,12 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("io.gitlab.arturbosch.detekt")
+    id("maven-publish")
 }
 
 android {
-    namespace = "ru.mulledwineapps.navigator"
+    namespace = "ru.mulledwineapps.composenavigator"
     compileSdk = 34
 
     defaultConfig {
@@ -29,6 +31,31 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    detekt {
+        config.setFrom(file("../config/detekt/detekt.yml"))
+        buildUponDefaultConfig = true
+    }
+    publishing {
+        multipleVariants {
+            allVariants()
+            withJavadocJar()
+            withSourcesJar()
+        }
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("mavenRelease") {
+                groupId = "ru.mulledwineapps"
+                artifactId = "compose-navigator"
+                version = "0.1.1"
+
+                from(components["release"])
+            }
+        }
     }
 }
 

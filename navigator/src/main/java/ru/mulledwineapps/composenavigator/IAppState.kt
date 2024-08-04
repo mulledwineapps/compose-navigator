@@ -1,4 +1,4 @@
-package ru.mulledwineapps.navigator
+package ru.mulledwineapps.composenavigator
 
 import androidx.compose.material3.SnackbarHostState
 import androidx.navigation.NavHostController

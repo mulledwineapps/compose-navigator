@@ -1,4 +1,4 @@
-package ru.mulledwineapps.navigator
+package ru.mulledwineapps.composenavigator
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -40,7 +40,8 @@ interface NavRoute<T : RouteNavigator> {
     fun Content(appState: IAppState, backStackEntry: NavBackStackEntry, viewModel: T)
 
     /**
-     * Returns the screen's ViewModel. Needs to be overridden so that Hilt can generate code for the factory for the ViewModel class.
+     * Returns the screen's ViewModel.
+     * Needs to be overridden so that Hilt can generate code for the factory for the ViewModel class.
      */
     @Composable
     fun viewModel(): T

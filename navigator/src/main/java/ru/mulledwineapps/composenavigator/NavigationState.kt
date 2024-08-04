@@ -1,4 +1,4 @@
-package ru.mulledwineapps.navigator
+package ru.mulledwineapps.composenavigator
 
 import androidx.compose.runtime.Immutable
 import androidx.navigation.NavOptions
