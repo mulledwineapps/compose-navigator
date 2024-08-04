@@ -51,7 +51,7 @@ afterEvaluate {
             create<MavenPublication>("mavenRelease") {
                 groupId = "ru.mulledwineapps"
                 artifactId = "compose-navigator"
-                version = "0.1.1"
+                version = "0.1.2"
 
                 from(components["release"])
             }
