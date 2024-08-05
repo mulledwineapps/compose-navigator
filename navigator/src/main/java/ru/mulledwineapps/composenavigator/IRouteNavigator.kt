@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.StateFlow
 /**
  * Navigator to use when initiating navigation from a ViewModel.
  */
-interface RouteNavigator {
+interface IRouteNavigator {
     fun onNavigated(state: NavigationState)
     fun navigateUp()
     fun popToRoute(route: String)
@@ -22,7 +22,7 @@ interface RouteNavigator {
     val navigationState: StateFlow<NavigationState>
 }
 
-class SpRouteNavigator : RouteNavigator {
+class RouteNavigator : IRouteNavigator {
 
     /**
      * Note that I'm using a single state here, not a list of states. As a result, if you quickly

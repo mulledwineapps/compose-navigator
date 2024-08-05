@@ -16,7 +16,7 @@ import timber.log.Timber
 /**
  * A route the app can navigate to.
  */
-interface NavRoute<T : RouteNavigator> {
+interface NavRoute<T : IRouteNavigator> {
 
     val screen: String
 
