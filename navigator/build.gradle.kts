@@ -26,11 +26,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
     detekt {
         config.setFrom(file("../config/detekt/detekt.yml"))
@@ -50,7 +50,7 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "ru.mulledwineapps"
             artifactId = "compose-navigator"
-            version = "0.1.5"
+            version = "0.1.6"
 
             afterEvaluate {
                 from(components["release"])
