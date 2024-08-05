@@ -8,7 +8,6 @@ local.properties
 # Gradle files
 .gradle
 /build
-*.jar
 
 # IntelliJ
 *.iml
