@@ -50,7 +50,7 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "ru.mulledwineapps"
             artifactId = "compose-navigator"
-            version = "0.1.6"
+            version = "0.1.7"
 
             afterEvaluate {
                 from(components["release"])
