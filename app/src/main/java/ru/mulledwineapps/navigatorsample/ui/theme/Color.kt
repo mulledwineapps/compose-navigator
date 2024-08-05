@@ -1,3 +1,4 @@
+@file:Suppress("MagicNumber")
 package ru.mulledwineapps.navigatorsample.ui.theme
 
 import androidx.compose.ui.graphics.Color
