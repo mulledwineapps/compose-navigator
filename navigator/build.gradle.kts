@@ -45,14 +45,14 @@ android {
     }
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            create<MavenPublication>("mavenRelease") {
-                groupId = "ru.mulledwineapps"
-                artifactId = "compose-navigator"
-                version = "0.1.2"
+publishing {
+    publications {
+        register<MavenPublication>("release") {
+            groupId = "ru.mulledwineapps"
+            artifactId = "compose-navigator"
+            version = "0.1.3"
 
+            afterEvaluate {
                 from(components["release"])
             }
         }

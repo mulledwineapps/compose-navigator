@@ -9,8 +9,6 @@ local.properties
 .gradle
 /build
 *.jar
-gradlew
-gradlew.bat
 
 # IntelliJ
 *.iml
