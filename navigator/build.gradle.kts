@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.library)
+    alias(libs.plugins.compose.compiler)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.detekt)
     id("maven-publish")
@@ -32,6 +33,9 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+    buildFeatures {
+        compose = true
+    }
     detekt {
         config.setFrom(file("../config/detekt/detekt.yml"))
         buildUponDefaultConfig = true
@@ -50,7 +54,7 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "ru.mulledwineapps"
             artifactId = "compose-navigator"
-            version = "0.1.7"
+            version = "0.1.8"
 
             afterEvaluate {
                 from(components["release"])
